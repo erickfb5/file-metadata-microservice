@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>File Metadata</title>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="/css/style.css" rel="stylesheet" type="text/css">
+   </head>
+
+   <body>
+      <div class="container">
+        <h2>File Metadata Microservice</h2>
+        <p>
+          Please upload a file ...
+        </p>
+        <div class="view">
+          <h4 id="output"></h4>
+          <form enctype="multipart/form-data" method="POST" action="/api/fileanalyse">
+            <input id="inputfield" type="file" name="upfile">
+            <input id="button" type="submit" value="Upload File">
+          </form>
+        </div>
+        <p>
+          by 
+          <a href="https://github.com/erickfb5">Erick Brandao</a>
+        </p>
+      </div>
+   </body>
+</html>
