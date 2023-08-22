@@ -21,8 +21,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-app.get("^/$|/index(.html)?", (req, res) => res.sendFile(path.join(__dirname, "views", "index.html"))
-);
+app.get("^/$|/index(.html)?", (req, res) => res.sendFile(path.join(__dirname, "views", "index.html")));
 app.post("/api/fileanalyse", upload.single("upfile"), uploadFile);
 
 app.all('*', (req, res) => {
@@ -36,5 +35,5 @@ app.all('*', (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3500;
 app.listen(PORT, () => console.log(`Your app is listening on port ${PORT}`));
